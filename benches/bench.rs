@@ -1,22 +1,22 @@
 #![feature(test)]
 
-extern crate dtoa;
+extern crate ftoa;
 extern crate test;
 
 macro_rules! benches {
     ($($name:ident($value:expr),)*) => {
-        mod bench_dtoa {
+        mod bench_ftoa {
             use test::{Bencher, black_box};
             $(
                 #[bench]
                 fn $name(b: &mut Bencher) {
-                    use dtoa;
+                    use ftoa;
 
                     let mut buf = Vec::with_capacity(20);
 
                     b.iter(|| {
                         buf.clear();
-                        dtoa::write(&mut buf, black_box($value)).unwrap()
+                        ftoa::write(&mut buf, black_box($value)).unwrap()
                     });
                 }
             )*
