@@ -14,7 +14,7 @@ The original C++ code of each function is included in comments.
 
 ## Performance
 
-![performance](https://raw.githubusercontent.com/dtolnay/ftoa/master/performance.png)
+![performance](https://raw.githubusercontent.com/maciejhirsz/ftoa/master/performance.png)
 
 ## Functions
 
